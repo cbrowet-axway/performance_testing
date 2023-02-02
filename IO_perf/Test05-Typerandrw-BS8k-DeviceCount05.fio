@@ -1,0 +1,64 @@
+[global]
+ioengine=libaio
+invalidate=1
+ramp_time=5
+iodepth=1
+runtime=30
+time_based
+direct=1
+group_reporting=1
+per_job_logs=0
+bs=8k
+rw=randrw
+
+[test1-subtest1-blocksize8k-threads1-device1of5]
+ stonewall
+ numjobs=1
+ filename=${TST_DIR}/device01
+[test1-subtest1-blocksize8k-threads1-device2of5]
+ numjobs=1
+ filename=${TST_DIR}/device02
+[test1-subtest1-blocksize8k-threads1-device3of5]
+ numjobs=1
+ filename=${TST_DIR}/device03
+[test1-subtest1-blocksize8k-threads1-device4of5]
+ numjobs=1
+ filename=${TST_DIR}/device04
+[test1-subtest1-blocksize8k-threads1-device5of5]
+ numjobs=1
+ filename=${TST_DIR}/device05
+ 
+[test1-subtest5-blocksize8k-threads5-device1of5]
+ stonewall
+ numjobs=5
+ filename=${TST_DIR}/device01
+[test1-subtest5-blocksize8k-threads5-device2of5]
+ numjobs=5
+ filename=${TST_DIR}/device02
+[test1-subtest5-blocksize8k-threads5-device3of5]
+ numjobs=5
+ filename=${TST_DIR}/device03
+[test1-subtest5-blocksize8k-threads5-device4of5]
+ numjobs=5
+ filename=${TST_DIR}/device04
+[test1-subtest5-blocksize8k-threads5-device5of5]
+ numjobs=5
+ filename=${TST_DIR}/device05
+ 
+[test1-subtest10-blocksize8k-threads10-device1of5]
+ stonewall
+ numjobs=10
+ filename=${TST_DIR}/device01
+[test1-subtest10-blocksize8k-threads10-device2of5]
+ numjobs=10
+ filename=${TST_DIR}/device02
+[test1-subtest10-blocksize8k-threads10-device3of5]
+ numjobs=10
+ filename=${TST_DIR}/device03
+[test1-subtest10-blocksize8k-threads10-device4of5]
+ numjobs=10
+ filename=${TST_DIR}/device04
+[test1-subtest10-blocksize8k-threads10-device5of5]
+ numjobs=10
+ filename=${TST_DIR}/device05
+ 
