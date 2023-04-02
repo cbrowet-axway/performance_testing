@@ -14,7 +14,12 @@ Synthetic result OUT_JSON is the sum of the io per seconds results of all jobs.
 - `*.fio`: `fio` job files are used to define what fio is supposed to do.  
 The job file format is the classic ini file, where the names enclosed in [] brackets define the job name. You are free to use any ASCII name you want, except global which has special meaning. Following the job name is a sequence of zero or more parameters, one per line, that define the behavior of the job. If the first character in a line is a ‘;’ or a ‘#’, the entire line is discarded as a comment.
 
-## Examples
+## Internet sources of examples
+
+- Google: https://cloud.google.com/compute/docs/disks/benchmarking-pd-performance
+- Ars Technica: https://arstechnica.com/gadgets/2020/02/how-fast-are-your-disks-find-out-the-open-source-way-with-fio/
+
+## Commented example
 
 - `fio`job file
 
