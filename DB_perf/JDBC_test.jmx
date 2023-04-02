@@ -16,7 +16,7 @@
         <boolProp name="autocommit">true</boolProp>
         <stringProp name="checkQuery"></stringProp>
         <stringProp name="connectionAge">5000</stringProp>
-        <stringProp name="dataSource">mysql_pool</stringProp>
+        <stringProp name="dataSource">db_pool</stringProp>
         <stringProp name="dbUrl">jdbc:mysql://cloud2.spax.pm:3306/performance_tests</stringProp>
         <stringProp name="driver">com.mysql.jdbc.Driver</stringProp>
         <stringProp name="initQuery"></stringProp>
@@ -46,7 +46,7 @@
       </SetupThreadGroup>
       <hashTree>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Delete table if exists" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="queryType">Update Statement</stringProp>
           <stringProp name="query">DROP TABLE IF EXISTS `test_table`;</stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -59,7 +59,7 @@
         </JDBCSampler>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Create table" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="queryType">Update Statement</stringProp>
           <stringProp name="query">CREATE TABLE `test_table` (
   `id` bigint(20) NOT NULL,
@@ -113,7 +113,7 @@
           <hashTree/>
         </hashTree>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Create record" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="query">INSERT INTO test_table (id, label) VALUES (${RAND_ID}, &apos;${__RandomString(125,abcdefghijklmnopqrstuvwxyz,)}&apos;);
 </stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -127,7 +127,7 @@
         </JDBCSampler>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Select record" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="query">SELECT label FROM test_table WHERE id=${RAND_ID};
 </stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -141,7 +141,7 @@
         </JDBCSampler>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Update record" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="query">UPDATE test_table set label=&apos;${__RandomString(125,abcdefghijklmnopqrstuvwxyz,)}&apos; WHERE id=${RAND_ID};
 </stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -155,7 +155,7 @@
         </JDBCSampler>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Select record" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="query">SELECT label FROM test_table WHERE id=${RAND_ID};
 </stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -169,7 +169,7 @@
         </JDBCSampler>
         <hashTree/>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Delete record" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="query">DELETE FROM test_table WHERE id=${RAND_ID};
 </stringProp>
           <stringProp name="queryArguments"></stringProp>
@@ -198,7 +198,7 @@
       </PostThreadGroup>
       <hashTree>
         <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="Delete table" enabled="true">
-          <stringProp name="dataSource">mysql_pool</stringProp>
+          <stringProp name="dataSource">db_pool</stringProp>
           <stringProp name="queryType">Update Statement</stringProp>
           <stringProp name="query">DROP TABLE IF EXISTS `test_table`;</stringProp>
           <stringProp name="queryArguments"></stringProp>
